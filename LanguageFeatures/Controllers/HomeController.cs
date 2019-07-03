@@ -16,7 +16,8 @@ namespace LanguageFeatures.Controllers
                 string category = p?.Category ?? "<brak>";
                 decimal? price = p?.Price ?? 0;
                 string relatedName = p?.Related?.Name ?? "<brak>";
-                results.Add(string.Format($"Produkt: {name}, kategoria: {category}, cena: {price}, powiązanie: {relatedName}"));
+                string inStock = p?.InStock.ToString() ?? "<brak>";
+                results.Add(string.Format($"Produkt: {name}, kategoria: {category}, cena: {price}, powiązanie: {relatedName}, w magazynie: {inStock}"));
             }
 
             return View(results);
