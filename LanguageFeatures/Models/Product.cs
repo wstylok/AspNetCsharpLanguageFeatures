@@ -6,6 +6,7 @@
         public string Category { get; set; } = "Wodniarstwo";
         public decimal? Price { get; set; }
         public Product Related { get; set; }
+        public bool InStock { get; } = true;
 
         public static Product[] GetProducts()
         {
