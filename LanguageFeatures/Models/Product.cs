@@ -3,6 +3,7 @@
     public class Product
     {
         public string Name { get; set; }
+        public string Category { get; set; } = "Wodniarstwo";
         public decimal? Price { get; set; }
         public Product Related { get; set; }
 
@@ -11,6 +12,7 @@
             Product kayak = new Product
             {
                 Name = "Kajak",
+                Category = "Sporty wodne",
                 Price = 275M
             };
             Product lifejacket = new Product
